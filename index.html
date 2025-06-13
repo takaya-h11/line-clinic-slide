@@ -40,17 +40,24 @@
     }
     button[disabled]{opacity:.3;cursor:default}
     button:hover:not([disabled]){background:#42a046}
+    .menu-image {
+      width:100%;
+      max-height:300px;
+      object-fit:contain;
+      margin-top:20px;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
 
-<!-- スライド 1 -->
 <section class="slide active">
   <div>
     <h1>📢 美容クリニック向け<br />無料LINE公式アカウント<br />活用ガイド</h1>
-    <p>無料で始められる LINE 公式アカウントで<br />
+    <p>LINE公式アカウントを無料で導入して<br />
       集客・リピート促進・顧客分析まで行う方法を<br />
-      5 分でご紹介します。</p>
+      5分でご紹介します。</p>
   </div>
   <div class="nav">
     <button disabled>← 戻る</button>
@@ -58,12 +65,11 @@
   </div>
 </section>
 
-<!-- スライド 2 -->
 <section class="slide">
   <div>
     <h2>✅ 無料でできること</h2>
     <ul>
-      <li>💬 メッセージ配信（<strong>月1,000通</strong>）</li>
+      <li>💬 メッセージ配信（月1,000通）</li>
       <li>📌 リッチメニュー (最大6分割)</li>
       <li>🔗 ボタンリンク (Googleマップ / 予約サイト)</li>
       <li>👥 友だち追加 (QR・URL)</li>
@@ -77,25 +83,36 @@
   </div>
 </section>
 
-<!-- スライド 3 -->
+<section class="slide">
+  <div>
+    <h2>📋 リッチメニュー設計テンプレート</h2>
+    <ul>
+      <li>LINEの下部に常設できるタップボタンで一目瞭然の導線設計。</li>
+      <li>「公式サイト」「クーポン」「ご予約」など重要メニューを統一配置。</li>
+      <li>色・アイコン配置・文言テンプレート付きで読みやすく簡単に設置可能。</li>
+    </ul>
+    <img src="https://drive.google.com/uc?export=download&id=1LaQq1qeKJlXX_LB7_WRUscG6Jml-7znS" alt="リッチメニュー例" class="menu-image">
+  </div>
+  <div class="nav">
+    <button onclick="prevSlide()">← 戻る</button>
+    <button onclick="nextSlide()">進む →</button>
+  </div>
+</section>
+
 <section class="slide">
   <div>
     <h2>💡 活用例（美容クリニック）</h2>
     <ul>
       <li>🕯 来院後フォロー & 次回来院リマインド<br>
-        ┗ 施術日翌日に「ご体調いかがですか？1ヶ月以内のご来院で特典あり🎁」など自動配信
-      </li>
-      <li>🎯 平日限定クーポンや誕生日特典の配信<br>
-        ┗「平日15時までの来院で500円OFFクーポン🎫 予約はお早めに！」
-      </li>
-      <li>📅 急なキャンセル枠の一斉告知<br>
-        ┗「🕐 明日15時に空きが出ました！ご希望の方はチャットで返信ください✨」
-      </li>
-      <li>📈 配信結果を週次・月次で自動分析</li>
+        →「ご体調いかがですか？1ヶ月以内のご来院で○○円OFF🎁」</li>
+      <li>🎯 平日限定クーポンや誕生日特典配信<br>
+        →「平日15時までのご来院で500円OFFクーポン📩」</li>
+      <li>📅 キャンセル枠一斉通知配信<br>
+        →「明日15時に空きが出ました！返信で予約OK✨」</li>
+      <li>📈 配信効果を週次・月次で自動集計</li>
       <li>💬 チャットで簡易予約案内<br>
-        ┗「ご予約はこちら」「◯日△時空きあります」などをタップ操作だけで案内可能
-      </li>
-      <li>🌟 ビフォーアフター紹介やコラム配信</li>
+        →「希望の日付・時間をお知らせください」だけで予約フロー開始</li>
+      <li>🌟 ビフォーアフター紹介・施術説明配信</li>
     </ul>
   </div>
   <div class="nav">
@@ -104,16 +121,44 @@
   </div>
 </section>
 
-<!-- スライド 4 -->
+<section class="slide">
+  <div>
+    <h2>📈 分析スプレッドシート提供</h2>
+    <ul>
+      <li>無料LINEの基本指標（配信・友だち追加・リーチ・受信・アクティブ）を自動集計。</li>
+      <li>週次・月次シートとグラフで直感的に状況把握。</li>
+      <li>GASで“ボタン一発レポート生成”も可能。</li>
+    </ul>
+  </div>
+  <div class="nav">
+    <button onclick="prevSlide()">← 戻る</button>
+    <button onclick="nextSlide()">進む →</button>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2>🖥 Googleサイト・HPへの埋め込み支援</h2>
+    <ul>
+      <li>チャット呼び出しボタン・予約導線リンクなどの設置代行対応。</li>
+      <li>現行ホームページに自然な形でLINE導線を導入できます。</li>
+    </ul>
+  </div>
+  <div class="nav">
+    <button onclick="prevSlide()">← 戻る</button>
+    <button onclick="nextSlide()">進む →</button>
+  </div>
+</section>
+
 <section class="slide">
   <div>
     <h2>🚀 経営者メリット</h2>
     <ul>
-      <li>💸 広告コスト 0 円から運用</li>
-      <li>🕒 スタッフ工数削減 (自動返信)</li>
-      <li>💬 顧客接点強化 (高い既読率)</li>
-      <li>📊 効果測定で PDCA</li>
-      <li>🛠 GAS連携で自動集計</li>
+      <li>💸 広告ゼロで運用可能</li>
+      <li>🕒 自動返信で工数圧縮</li>
+      <li>💬 高既読率で顧客接点強化</li>
+      <li>📊 PDCAを数値で回せる</li>
+      <li>🛠 ボタン一発でレポート生成</li>
     </ul>
   </div>
   <div class="nav">
@@ -122,38 +167,15 @@
   </div>
 </section>
 
-<!-- スライド 5 -->
-<section class="slide">
-  <div>
-    <h2>🎁 サポート内容</h2>
-    <ul>
-      <li>📋 リッチメニュー設計テンプレート<br>
-        ┗ タップ領域ごとに機能・動線を整理したパターン見本（美容特化版）を配布
-      </li>
-      <li>📈 分析スプレッドシート提供<br>
-        ┗ 無料LINEの基本指標をもとに月次・週次分析ができる自動レポートツールを提供
-      </li>
-      <li>🖥 Googleサイト・HPへの埋め込み支援<br>
-        ┗ 予約ボタンや紹介ページなどのLINE連携導線をわかりやすくサイトに組み込み
-      </li>
-    </ul>
-  </div>
-  <div class="nav">
-    <button onclick="prevSlide()">← 戻る</button>
-    <button onclick="nextSlide()">進む →</button>
-  </div>
-</section>
-
-<!-- スライド 6 -->
 <section class="slide">
   <div>
     <h2>📌 まとめ</h2>
     <ul>
-      <li>✅ 来院促進・ファン化</li>
-      <li>✅ 数値で効果を証明</li>
-      <li>✅ 無料で気軽に導入</li>
+      <li>✅ 来院促進・リピート力アップ</li>
+      <li>✅ 数値で成果を証明</li>
+      <li>✅ 無料で安心導入</li>
     </ul>
-    <p style="margin-top:25px;">まずは無料プランで<br><strong>「試して → 伸ばす」</strong> 一歩を。</p>
+    <p style="margin-top:25px;">まずは無料プランからの<br><strong>「試して → 伸ばす」</strong>運用を始めましょう。</p>
   </div>
   <div class="nav">
     <button onclick="prevSlide()">← 戻る</button>
@@ -165,7 +187,7 @@
   const slides = document.querySelectorAll('.slide');
   let index = 0;
   function show(n){
-    slides.forEach((s,i)=>s.classList.toggle('active',i===n));
+    slides.forEach((s,i)=>s.classList.toggle('active', i===n));
     index = n;
     document.querySelectorAll('.nav').forEach((nav,i)=>{
       const [prevBtn,nextBtn] = nav.querySelectorAll('button');
@@ -173,8 +195,8 @@
       nextBtn.disabled = (i===slides.length-1);
     });
   }
-  function nextSlide(){ if(index < slides.length-1) show(index+1);}
-  function prevSlide(){ if(index > 0) show(index-1);}
+  function nextSlide(){ if(index < slides.length-1) show(index+1); }
+  function prevSlide(){ if(index > 0) show(index-1); }
 </script>
 </body>
 </html>

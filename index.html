@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>美容クリニック向け LINE公式アカウント活用ガイド</title>
+
+  <!-- ------- スタイル ------- -->
+  <style>
+    :root {
+      --main-bg: #f5f5f5;
+      --card-bg: #ffffff;
+      --accent:  #4caf50;
+    }
+    /* リセット & レイアウト */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+      background:var(--main-bg);
+      height:100vh;display:flex;justify-content:center;align-items:center;
+      overflow:hidden;
+    }
+    /* スライド */
+    .slide{
+      width:90vw;max-width:900px;height:80vh;
+      background:var(--card-bg);border-radius:14px;padding:50px 60px;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+      display:none;flex-direction:column;justify-content:space-between;
+    }
+    .slide.active{display:flex;animation:fade 0.4s}
+    @keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+    h1{font-size:2rem;margin-bottom:25px;color:#333}
+    h2{font-size:1.6rem;margin-bottom:20px;color:var(--accent)}
+    ul{padding-left:1.4rem;font-size:1.15rem;line-height:1.6}
+    ul li{margin-bottom:8px}
+    p{font-size:1.1rem;line-height:1.8}
+
+    /* ナビボタン */
+    .nav{
+      display:flex;justify-content:space-between;margin-top:35px;
+    }
+    button{
+      font-size:1rem;border:none;border-radius:6px;
+      padding:10px 28px;cursor:pointer;color:#fff;
+      background:var(--accent);transition:background .2s;
+    }
+    button[disabled]{opacity:.3;cursor:default}
+    button:hover:not([disabled]){background:#42a046}
+  </style>
+</head>
+<body>
+
+  <!-- スライド 0 -->
+  <section class="slide active">
+    <div>
+      <h1>📢 美容クリニック向け<br />無料LINE公式アカウント<br />活用ガイド</h1>
+      <p>無料で始められる LINE 公式アカウントで<br />
+         集客・リピート促進・顧客分析まで行う方法を<br />
+         5 分でご紹介します。</p>
+    </div>
+    <div class="nav">
+      <button disabled>← 戻る</button>
+      <button onclick="nextSlide()">進む →</button>
+    </div>
+  </section>
+
+  <!-- スライド 1 -->
+  <section class="slide">
+    <div>
+      <h2>✅ 無料でできること</h2>
+      <ul>
+        <li>💬 メッセージ配信 <span style="color:#888">(月1,000通)</span></li>
+        <li>📌 リッチメニュー (最大6分割)</li>
+        <li>🔗 ボタンリンク (Googleマップ / 予約サイト)</li>
+        <li>👥 友だち追加 (QR・URL)</li>
+        <li>📊 基本分析 (配信数・反応率)</li>
+        <li>🗓 キーワード自動応答</li>
+      </ul>
+    </div>
+    <div class="nav">
+      <button onclick="prevSlide()">← 戻る</button>
+      <button onclick="nextSlide()">進む →</button>
+    </div>
+  </section>
+
+  <!-- スライド 2 -->
+  <section class="slide">
+    <div>
+      <h2>💡 活用例（美容クリニック）</h2>
+      <ul>
+        <li>🧴 来院後フォロー & 次回来院リマインド</li>
+        <li>🎯 限定クーポン配布で来店促進</li>
+        <li>📅 当日キャンセル枠の即時配信</li>
+        <li>📈 配信結果を週次・月次で分析</li>
+      </ul>
+    </div>
+    <div class="nav">
+      <button onclick="prevSlide()">← 戻る</button>
+      <button onclick="nextSlide()">進む →</button>
+    </div>
+  </section>
+
+  <!-- スライド 3 -->
+  <section class="slide">
+    <div>
+      <h2>🚀 経営者メリット</h2>
+      <ul>
+        <li>💸 広告コスト 0 円から運用</li>
+        <li>🕒 スタッフ工数削減 (自動返信)</li>
+        <li>💬 顧客接点強化 (高い既読率)</li>
+        <li>📊 効果測定で PDCA</li>
+        <li>🛠 GAS連携で自動集計</li>
+      </ul>
+    </div>
+    <div class="nav">
+      <button onclick="prevSlide()">← 戻る</button>
+      <button onclick="nextSlide()">進む →</button>
+    </div>
+  </section>
+
+  <!-- スライド 4 -->
+  <section class="slide">
+    <div>
+      <h2>🎁 サポート内容</h2>
+      <ul>
+        <li>📋 リッチメニュー設計テンプレート</li>
+        <li>📈 分析スプレッドシート提供</li>
+        <li>🧠 bit.ly×GAS クリック計測</li>
+        <li>🖥 Googleサイト・HPへの埋め込み支援</li>
+      </ul>
+    </div>
+    <div class="nav">
+      <button onclick="prevSlide()">← 戻る</button>
+      <button onclick="nextSlide()">進む →</button>
+    </div>
+  </section>
+
+  <!-- スライド 5 -->
+  <section class="slide">
+    <div>
+      <h2>📌 まとめ</h2>
+      <ul>
+        <li>✅ 来院促進・ファン化</li>
+        <li>✅ 数値で効果を証明</li>
+        <li>✅ 無料で気軽に導入</li>
+      </ul>
+      <p style="margin-top:25px;">まずは無料プランで<br><strong>「試して -> 伸ばす」</strong> 一歩を。</p>
+    </div>
+    <div class="nav">
+      <button onclick="prevSlide()">← 戻る</button>
+      <button disabled>終わり</button>
+    </div>
+  </section>
+
+  <!-- ------- スクリプト ------- -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+    function show(n){
+      slides.forEach((s,i)=>s.classList.toggle('active',i===n));
+      index = n;
+      // ボタンの disabled 状態更新
+      document.querySelectorAll('.nav').forEach((nav,i)=>{
+        const [prevBtn,nextBtn] = nav.querySelectorAll('button');
+        prevBtn.disabled = (i===0);
+        nextBtn.disabled = (i===slides.length-1);
+      });
+    }
+    function nextSlide(){ if(index < slides.length-1) show(index+1);}
+    function prevSlide(){ if(index > 0) show(index-1);}
+  </script>
+</body>
+</html>

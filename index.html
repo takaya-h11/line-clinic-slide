@@ -11,7 +11,6 @@
       --card-bg: #ffffff;
       --accent:  #4caf50;
     }
-    /* リセット & レイアウト */
     *{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
@@ -19,7 +18,6 @@
       height:100vh;display:flex;justify-content:center;align-items:center;
       overflow:hidden;
     }
-    /* スライド */
     .slide{
       width:90vw;max-width:900px;height:80vh;
       background:var(--card-bg);border-radius:14px;padding:50px 60px;
@@ -27,7 +25,7 @@
       display:none;flex-direction:column;justify-content:space-between;
     }
     .slide.active{display:flex;animation:fade 0.4s}
-    @keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)} }
 
     h1{font-size:2rem;margin-bottom:25px;color:#333}
     h2{font-size:1.6rem;margin-bottom:20px;color:var(--accent)}
@@ -35,7 +33,6 @@
     ul li{margin-bottom:8px}
     p{font-size:1.1rem;line-height:1.8}
 
-    /* ナビボタン */
     .nav{
       display:flex;justify-content:space-between;margin-top:35px;
     }
@@ -49,14 +46,10 @@
   </style>
 </head>
 <body>
-
-  <!-- スライド 0 -->
   <section class="slide active">
     <div>
       <h1>📢 美容クリニック向け<br />無料LINE公式アカウント<br />活用ガイド</h1>
-      <p>無料で始められる LINE 公式アカウントで<br />
-         集客・リピート促進・顧客分析まで行う方法を<br />
-         5 分でご紹介します。</p>
+      <p>無料で始められる LINE 公式アカウントで<br />集客・リピート促進・顧客分析まで行う方法を<br />5 分でご紹介します。</p>
     </div>
     <div class="nav">
       <button disabled>← 戻る</button>
@@ -64,7 +57,6 @@
     </div>
   </section>
 
-  <!-- スライド 1 -->
   <section class="slide">
     <div>
       <h2>✅ 無料でできること</h2>
@@ -83,7 +75,6 @@
     </div>
   </section>
 
-  <!-- スライド 2 -->
   <section class="slide">
     <div>
       <h2>💡 活用例（美容クリニック）</h2>
@@ -92,6 +83,8 @@
         <li>🎯 限定クーポン配布で来店促進</li>
         <li>📅 当日キャンセル枠の即時配信</li>
         <li>📈 配信結果を週次・月次で分析</li>
+        <li>💬 チャットでの簡易予約案内</li>
+        <li>🌟 ビフォーアフター紹介などコンテンツ配信</li>
       </ul>
     </div>
     <div class="nav">
@@ -100,7 +93,6 @@
     </div>
   </section>
 
-  <!-- スライド 3 -->
   <section class="slide">
     <div>
       <h2>🚀 経営者メリット</h2>
@@ -118,15 +110,14 @@
     </div>
   </section>
 
-  <!-- スライド 4 -->
   <section class="slide">
     <div>
       <h2>🎁 サポート内容</h2>
       <ul>
         <li>📋 リッチメニュー設計テンプレート</li>
         <li>📈 分析スプレッドシート提供</li>
-        <li>🧠 bit.ly×GAS クリック計測</li>
         <li>🖥 Googleサイト・HPへの埋め込み支援</li>
+        <li>📞 導入から活用まで個別アドバイス可</li>
       </ul>
     </div>
     <div class="nav">
@@ -135,7 +126,6 @@
     </div>
   </section>
 
-  <!-- スライド 5 -->
   <section class="slide">
     <div>
       <h2>📌 まとめ</h2>
@@ -152,14 +142,12 @@
     </div>
   </section>
 
-  <!-- ------- スクリプト ------- -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let index = 0;
     function show(n){
       slides.forEach((s,i)=>s.classList.toggle('active',i===n));
       index = n;
-      // ボタンの disabled 状態更新
       document.querySelectorAll('.nav').forEach((nav,i)=>{
         const [prevBtn,nextBtn] = nav.querySelectorAll('button');
         prevBtn.disabled = (i===0);
